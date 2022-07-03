@@ -17,7 +17,7 @@ This project teaches(especially) you how to:
 -call function when transition ends
 
 Here is my project site's url-
-<https://drougnov.github.io/Color-Generator/>
+<https://drougnov.github.io/Drum-kit/>
 
 ## Built with
 

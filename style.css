@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,main .kick,main .circle,.circle kbd,.kick kbd,main .disk,.disk kbd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+html{
+    overflow: hidden;
+}
+body{
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+body>span{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main{
+    background: rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+/*kick drum*/
+
+main .kick{
+    width: 100px;
+    height: 120px;
+    background: linear-gradient(90deg,brown,red,brown);
+    position: relative;
+}
+.kick kbd{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(128, 128, 128, 0.5);
+}
+.kick::after{   /*kick drum's pedal*/
+    position: absolute;
+    content: '';
+    bottom: -1.5rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10px;
+    height: 20px;
+    background: gray;
+    z-index: -1;
+    transform: rotateX(180deg);
+    box-shadow: 0 10px 10px 0 black;
+}
+
+main .circle{     /*white drums(tom)*/
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: whitesmoke;
+    padding: 1rem;
+    border: 3px solid black;
+    border-radius: 50%;
+    box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.2);
+}
+main .circle:nth-child(2){
+    width: 90px;
+    height: 90px;
+    top: -3rem;
+    left: -3rem;
+}
+main .circle:nth-child(3){
+    width: 90px;
+    height: 90px;
+    top: -3rem;
+    right: -3rem;
+}
+main .circle:nth-child(4){
+    bottom: -2rem;
+    left: -4rem;
+}
+main .circle:nth-child(5){
+    bottom: -2rem;
+    right: -4rem;
+}
+.circle kbd{
+    width: 40px;
+    height: 40px;
+    padding: .5rem;
+}
+
+main .disk{   /*yellow disks*/
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background: gold;
+    box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+main .disk:nth-child(6){
+    top: -2.5rem;
+    left: -9rem;
+}
+main .disk:nth-child(7){
+    top: -2.5rem;
+    right: -9rem;
+}
+main .disk:nth-child(8){
+    width: 100px;
+    height: 100px;
+    top: 4rem;
+    left: -9rem;
+    z-index: 1;
+}
+.disk kbd{
+    width: 50px;
+    height: 50px;
+    padding: .5rem;
+}
+kbd{
+    font-size: 1rem;
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: 50%;
+    transition: all .3s linear;
+}
+.key.playing kbd{
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+}
+@media(min-width:650px){
+    main{
+        transform: scale(1.5);
+    }
+}
+@media(min-width: 1200px){
+    main{
+        transform: scale(2);
+    }
+}

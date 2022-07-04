@@ -8,7 +8,7 @@ Hello! Thanks for cheking out this repository.
 
 ## What is it about
 
-It's a drum kit sound generator made with vanilla JS. I've been practicing basic javascript project from [wesbos's javascript 30 course](https://courses.wesbos.com/account/access/62adf09d8ed3995269d75c5a).
+It's a drum kit sound generator made with vanilla JS. I've been practicing basic javascript project from [wesbos's javascript 30 course](https://courses.wesbos.com/account/access/62adf09d8ed3995269d75c5a). This is the day1 project.
 
 This project teaches(especially) you how to:
 

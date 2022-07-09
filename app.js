@@ -14,4 +14,8 @@ keys.forEach(key=>{
     key.firstChild.addEventListener('transitionend',(e)=>{      //function will be called when 'kbd' element's transition ends
         key.classList.remove('playing');
     })
+    key.addEventListener('click',function(){
+       const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+       audio.play();
+  })
 })

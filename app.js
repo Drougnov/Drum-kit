@@ -12,15 +12,15 @@ window.addEventListener('keydown',(e)=>{
 const keys = document.querySelectorAll('.key');
 
 keys.forEach(button=>{
-    //remove transition
-    button.firstChild.addEventListener('transitionend',(e)=>{      //function will be called when 'kbd' element's transition ends
-        button.classList.remove('playing');
-    })
-
     //play audio when button clicked
     button.addEventListener('click',function(){
+        button.classList.add('playing')
         const audio = document.querySelector(`audio[data-key="${this.getAttribute('data-key')}"]`) //<====this will grab keycode of clicked element
         audio.play();
         audio.currentTime = 0;
+    })
+    //remove transition
+    button.firstChild.addEventListener('transitionend',(e)=>{      //function will be called when 'kbd' element's transition ends
+        button.classList.remove('playing');
     })
 })
